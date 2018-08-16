@@ -1,6 +1,6 @@
 function Sortear() {
   var sheet = SpreadsheetApp.getActiveSheet();
-  
+    
   var PlanInicio = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
   var PlanOpcoes = SpreadsheetApp.getActiveSpreadsheet().getSheets()[1];
   
@@ -15,8 +15,13 @@ function Sortear() {
   PlanInicio.setActiveCell('B5').setValue(ListFunc[numFunc]);
   
     
+  //Array das Lojas
+  var ListLojas = PlanOpcoes.getRange('B1:B4').getValues();
+  PlanInicio.getRange(5, 4).setValue(ListLojas[numLoja]);
+  
   // opção 2 - Modelo diferente do funcionário para buscar nome da loja com base no random linha 11
-  var Loja = PlanOpcoes.getRange(numLoja, 2).getValue();
-  PlanInicio.getRange(5, 4).setValue(Loja);
+  // var Loja = PlanOpcoes.getRange(numLoja, 2).getValue();
+  // PlanInicio.getRange(5, 4).setValue(Loja);
+
 
 }
