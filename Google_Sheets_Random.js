@@ -1,8 +1,8 @@
 function Sortear() {
   var sheet = SpreadsheetApp.getActiveSheet();
     
-  var PlanInicio = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
-  var PlanOpcoes = SpreadsheetApp.getActiveSpreadsheet().getSheets()[1];
+  const PlanInicio = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  const PlanOpcoes = SpreadsheetApp.getActiveSpreadsheet().getSheets()[1];
   
   //Busca um random entre 3 opções para colocar um funcionário
   var numFunc = Math.round(Math.random() * (3-1) + 1)-1; 
